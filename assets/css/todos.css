@@ -54,6 +54,9 @@ li span {
     width: 0;
     display: inline-block;
     transition: 0.2s linear;
+    -webkit-transition: 0.2s linear;
+    -moz-transition: 0.2s linear;
+    -o-transition: 0.2s linear;
     opacity: 0;
 }
 
