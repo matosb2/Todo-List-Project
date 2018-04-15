@@ -65,7 +65,6 @@ li:hover span {
     opacity: 1.0;
 }
 
-
 input:focus {
     background: white;
     border: 3px solid #2980b9;
@@ -79,11 +78,49 @@ input:focus {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
+#press {
+    visibility: visible;
+    opacity: 1.0;
+    transition: visibility 1s 0s, opacity 1s;
+    animation: fadeInInput 1s;
+}
+
+#press.hide {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s;
+}
+
 .fa-plus {
     float: right;
+}
+
+.fa-trash {
+    pointer-events: none;
 }
 
 .completed {
     color: gray;
     text-decoration: line-through;
+}
+
+.fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s;
+}
+
+.fadeIn {
+    visibility: visible;
+    opacity: 1.0;
+    transition: visibility 0s 1s, opacity 1s;
+}
+
+@keyframes fadeInInput {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
